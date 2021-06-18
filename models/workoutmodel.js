@@ -51,7 +51,7 @@ const workoutmodelSchema = new Schema({
      
      {
        distance: {
-         type: number,
+         type: Number,
          default: 0,
 
        },
