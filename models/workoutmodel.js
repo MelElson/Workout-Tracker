@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const workoutmodelSchema = new Schema({
+const workoutSchema = new Schema({
 
   date: {
     type: Date,
@@ -56,14 +56,12 @@ const workoutmodelSchema = new Schema({
 
        },
      },
-    
-    
+       
   ],
-
-  
-
 });
 
-const Workout = mongoose.model("Workout", workoutmodelSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = Workout;
+
+//Workout is also in route/api
