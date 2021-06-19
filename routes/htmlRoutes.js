@@ -1,3 +1,4 @@
+const model  = require('mongoose');
 const router = require("express").Router(); //add this?
 const path = require('path');
 
