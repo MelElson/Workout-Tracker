@@ -60,8 +60,7 @@ const workoutSchema = new Schema({
   ],
 });
 
-const Workout = mongoose.model("Workout", workoutSchema);
+const Workout = mongoose.model("/Workouts", workoutSchema);
 
 module.exports = Workout;
-
 //Workout is also in route/api
