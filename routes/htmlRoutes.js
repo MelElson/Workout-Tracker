@@ -3,7 +3,7 @@ const path = require('path');
 
 // ROUTING
 
-module.exports = (app) => {
+
   // => HTML GET Requests
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
@@ -23,6 +23,6 @@ module.exports = (app) => {
     router.get('/stats', (req,res) => {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
   });
-};
+
 
 module.exports = router
