@@ -10,10 +10,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shrouded-beyond-16842", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/workouts", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-    useCreateIndex: true,
+    userCreateIndex: true,  ///changed useCreateIndex
   useFindAndModify: false
 });
 
@@ -24,3 +24,5 @@ app.use(require("./routes/htmlRoutes")); //add this
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+//mongodb://localhost/shrouded-beyond-16842
