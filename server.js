@@ -33,5 +33,3 @@ app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
 
-//mongodb://localhost/shrouded-beyond-16842
-//mongodb://localhost/workout
