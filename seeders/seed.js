@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Workout = require('../models/Workouts');
-
+require("dotenv").config();
 mongoose.connect('mongodb://localhost/workout', {
   useNewUrlParser: true,
   useFindAndModify: false,
@@ -135,3 +135,12 @@ Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+
+  mongoose.connection.on('connected', () =>
+  console.log('Connected to MongoDB Endpoint')
+);
+mongoose.connection.on('error', (err) =>
+  console.log(`Mongoose default connection error: ${err}`)
+);
+
+
